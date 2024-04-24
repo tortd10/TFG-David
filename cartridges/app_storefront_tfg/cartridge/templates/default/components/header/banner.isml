@@ -1,0 +1,14 @@
+<div class="header-banner slide-up hide">
+    <div class="container">
+        <div class="flex-center-between">
+            <div class="content">
+                <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+            </div>
+            <div class="close-button">
+                <button type="button" class="btn close" aria-label="Close">
+                    <span class="icon icon-close" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
