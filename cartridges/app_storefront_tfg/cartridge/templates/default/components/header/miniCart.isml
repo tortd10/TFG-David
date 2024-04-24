@@ -1,0 +1,17 @@
+<div class="minicart-total">
+    <a class="minicart-link btn-icon" href="${URLUtils.https('Cart-Show')}"
+        title="${Resource.msgf('minicart.count', 'common', null, pdict.quantityTotal)}"
+        aria-label="${Resource.msgf('minicart.count', 'common', null, pdict.quantityTotal)}" aria-haspopup="true"
+        data-analytics-event-label="${Resource.msg('label.basket','tealium',null)}">
+        <span class="icon icon-cart f-17"></span>
+        <span class="minicart-quantity">
+            <isprint value="${pdict.quantityTotal}" formatter="##" />
+        </span>
+    </a>
+</div>
+<div class="popover">
+    <div class="cart-fake"></div>
+</div>
+<div class="add-to-cart-messages d-none" data-js="add-to-cart-container">
+    <div class="alert add-to-basket-alert text-center" role="alert" data-js="add-to-cart-messages"></div>
+</div>

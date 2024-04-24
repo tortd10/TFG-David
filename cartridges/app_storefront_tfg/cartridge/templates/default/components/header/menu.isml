@@ -10,6 +10,17 @@
         <div class="menu-group collapse navbar-collapse" id="navbarCollapse" role="navigation" data-js="menu-group">
             <h3 class="menu-group-title d-block d-xl-none">${Resource.msg('header.menu.categories', 'common', null)}
             </h3>
+            <ul class="nav navbar-nav" role="menu" data-js="navbar" data-analytics-menu>
+                <isif condition="${typeof pdict !== 'undefined' && pdict && typeof pdict.categories !== 'undefined' && pdict.categories}">
+                    <isset name="loopstatus" value="" scope="page" />
+                    <iscomment> menú de categorías </iscomment>
+                    <isloop items="${pdict.categories}" var="category" status="loopstatus">
+                        <isif condition="${typeof category !== 'undefined' && category && typeof category.toShow !== 'undefined' && category.toShow}">
+                            <isinclude template="components/header/menuTemplate" />
+                        </isif>
+                    </isloop>
+                </isif>
+            </ul>
         </div>
     </isif>
 </nav>

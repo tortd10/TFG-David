@@ -1,0 +1,33 @@
+<isif condition="${typeof category.subCategories !== 'undefined' && category.subCategories}">
+    <li class="nav-item submenu-item-1 ${category.campaignCategory ? 'd-block d-xl-none' : ''}" role="presentation"
+        data-url="<isprint value="${(typeof category !== 'undefined' && category && typeof category.url !== 'undefined' && category.url) ? category.url : ''}" encoding="htmldoublequote" />"
+    >
+        <span class="nav-link d-none d-xl-flex">
+            ${(typeof category !== 'undefined' && category && typeof category.name !== 'undefined' && category.name) ? category.name : ''}
+        </span>
+        <span class="separator d-none d-xl-flex"></span>
+        <div class="submenu-link-1 d-flex d-xl-none" data-js="show-level-2" data-index="${loopstatus.index}">
+            <span>
+                <isif condition="${category.campaignCategory}">
+                    <img class="tile-image"
+                        src="${URLUtils.staticURL(URLUtils.CONTEXT_CATALOG, 'promocaixa-m-catalog', '/category-icons/WIVAI-ICON.png')}"
+                        alt="${(typeof category !== 'undefined' && category && typeof category.name !== 'undefined' && category.name) ? category.name.charAt(0).toUpperCase() + category.name.substr(1).toLowerCase() : ''}"/>
+                </isif>
+                ${(typeof category !== 'undefined' && category && typeof category.name !== 'undefined' && category.name) ? category.name.charAt(0).toUpperCase() + category.name.substr(1).toLowerCase() : ''}
+            </span>
+            <span class="icon icon-dropdown-right f-9 d-block d-xl-none" data-js="icon-level-2"></span>
+        </div>
+        <isset name="menuItem" value="${category}" scope="page" />
+    </li>
+<iselse/>
+    <li class="nav-item submenu-item-1" role="presentation">
+        <a href="<isprint value="${(typeof category !== 'undefined' && category && typeof category.url !== 'undefined' && category.url) ? category.url : ''}" encoding="htmldoublequote" />"
+        id="${(typeof category !== 'undefined' && category && typeof category.id !== 'undefined' && category.id) ? category.id : ''}"
+        class="nav-link submenu-link-1"
+        role="link"
+        tabindex="0">
+        ${(typeof category !== 'undefined' && category && typeof category.name !== 'undefined' && category.name) ? category.name.charAt(0).toUpperCase() + category.name.substr(1).toLowerCase() : ''}
+        </a>
+        <span class="separator d-none d-xl-flex"></span>
+    </li>
+</isif>

@@ -1,0 +1,14 @@
+<div class="site-search">
+    <form role="search" class="site-search-form" action="${URLUtils.url('Search-Show')}" method="get" name="simpleSearch">
+        <div class="search-wrapper">           
+            <input class="form-control search-field" type="text" name="q" value="" data-js="search-input"
+                placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}" role="combobox"
+                aria-describedby="search-assistive-text" aria-haspopup="listbox" aria-owns="search-results"
+                aria-expanded="false" aria-autocomplete="list" aria-activedescendant="" aria-controls="search-results"
+                aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}" autocomplete="off" data-analytics-event-label/>
+            <span class="icon icon-search"></span>
+        </div>
+
+        <input type="hidden" value="${pdict.locale}" name="lang" />
+    </form>
+</div>

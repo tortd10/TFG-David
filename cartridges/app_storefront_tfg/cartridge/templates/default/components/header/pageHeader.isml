@@ -1,5 +1,4 @@
-<header>
-    <isinclude template="components/header/banner" />
+<header>   
     
     <div class="container">
         <div class="row">
