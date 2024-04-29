@@ -1,4 +1,8 @@
 <header>
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/homePage.css');
+    </isscript>
     <nav>
         <div class="header container">
             <div class="row">
@@ -8,6 +12,7 @@
                             <img class="hidden-md-down" src="${URLUtils.staticURL('/images/infonou-logo.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
                             <img class="d-lg-none mobile" src="${URLUtils.staticURL('/images/infonou-logoSmall.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
                         </a>
+                        <h1 class="pruebas1"> HOLAAAAAAAAAAAAA </h1>
                     </div>
                     <div class="navbar-header">
                         <div class="pull-right">

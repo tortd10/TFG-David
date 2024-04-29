@@ -103,6 +103,10 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1"
   },
+  "paths": {
+    "base": "cartridges/app_storefront_base/",
+    "app_custom_davidtfg": "cartridges/app_custom_davidtfg/"
+  },
   "browserslist": [
     "last 2 versions",
     "ie >= 10"
